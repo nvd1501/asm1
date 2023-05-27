@@ -1,0 +1,25 @@
+{
+  "products": [
+    {
+      "name": "Ngô duy 1234",
+      "price": 34,
+      "img": "ảnh",
+      "id": 4
+    },
+    {
+      "name": "duyy",
+      "price": 11,
+      "id": 5
+    },
+    {
+      "name": "dsdsds",
+      "price": "3",
+      "id": 6
+    },
+    {
+      "name": "cscsc",
+      "price": 0,
+      "id": 7
+    }
+  ]
+}
