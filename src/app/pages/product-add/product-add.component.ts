@@ -9,24 +9,49 @@ import { ProductService } from 'src/app/services/product.service';
   styleUrls: ['./product-add.component.scss']
 })
 export class ProductAddComponent {
+
+  // productForm = this.formBuilder.group({
+  //   name: ["", Validators.required, Validators.minLength(2)],
+  //   price: [0]
+  // })
+
+  //   constructor(
+  //     private productService: ProductService,
+  //     private formBuilder: FormBuilder
+  //   ){}
+
+  //   onHandleAdd(){
+  //     if(this.productForm.valid){
+  //      const product: IProduct = {
+  //        name: this.productForm.value.name || "",
+  //        price: this.productForm.value.price || 0,
+  //      }
+  //      this.productService.addProduct(product).subscribe(product =>{
+  //        console.log(product)
+  //      })
+  //     }
+  //   }
+
   productForm = this.formBuilder.group({
-    name: ['', [Validators.required, Validators.minLength(4)]],
-    price: [0],
+    name: ['', [Validators.required, Validators.minLength(2)]],
+    price: [0]
   })
+
   constructor(
     private productService: ProductService,
-    private formBuilder: FormBuilder) { }
+    private formBuilder: FormBuilder
+    ){}
 
-  onHandleAdd() {
-    if (this.productForm.valid) {
-      const product: IProduct = {
-        name: this.productForm.value.name || "",
-        price: this.productForm.value.price || 0,
+    onHandleAdd(){
+      if(this.productForm.valid){
+        const product: IProduct = {
+          name: this.productForm.value.name || "",
+          price: this.productForm.value.price || 0
+        }
+
+        this.productService.addProduct(product).subscribe(product =>{
+          console.log("Thành công", product)
+        })
       }
-      this.productService.addProduct(product).subscribe(product => {
-        console.log('Thành công', product)
-      })
     }
-
-  }
 }

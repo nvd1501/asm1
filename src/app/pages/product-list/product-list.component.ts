@@ -9,19 +9,18 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class ProductListComponent {
 
-  products: IProduct[] = [];
 
-  constructor(private productService: ProductService) {
-    this.productService.getProducts().subscribe(data => {
-      this.products = data
-    }, error => {
-      console.log(error.message)
-    })
-  }
+    products: IProduct[] = [];
+    
+    constructor(private productService: ProductService){
+      this.productService.getProduct().subscribe(data =>{
+        this.products = data;
+      })
+    }
 
-  removeItem(id: any) {
-    this.productService.deleteProduct(id).subscribe(() => {
-      console.log('delete thanhf cong')
-    })
-  }
+    removeItem(id: any){
+      this.productService.deleteProduct(id).subscribe(() =>{
+        console.log(" XÓa thành công")
+      })
+    }
 }

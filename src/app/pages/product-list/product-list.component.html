@@ -1,26 +1,19 @@
-<h1>Product List</h1>
-
-<table class="table table-bordered">
+<table border="1">
     <thead>
         <tr>
             <th>STT</th>
-            <th>Tên sản phẩm</th>
+            <th>Tên</th>
             <th>Giá</th>
             <th></th>
-        </tr>
+        </tr> 
     </thead>
     <tbody>
-        <tr *ngFor="let product of products; index as i">
+        <tr *ngFor=" let product of products; index as i">
             <td>{{ i + 1 }}</td>
             <td>{{ product.name }}</td>
             <td>{{ product.price }}</td>
             <td>
-                <button
-                    class="btn btn-danger"
-                    (click)="removeItem(product.id)!"
-                >
-                    Xóa
-                </button>
+                <button (click)="removeItem(product.id)!">Xóa</button>
             </td>
         </tr>
     </tbody>

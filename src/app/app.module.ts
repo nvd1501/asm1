@@ -9,9 +9,6 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './pages/product-list/product-list.component';
 import { ProductAddComponent } from './pages/product-add/product-add.component';
 import { ProductEditComponent } from './pages/product-edit/product-edit.component';
-import { AdminLayoutComponent } from './layouts/admin-layout/admin-layout.component';
-import { DashboardComponent } from './pages/dashboard/dashboard.component';
-import { HomePageComponent } from './pages/home-page/home-page.component';
 
 
 
@@ -21,9 +18,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
     ProductListComponent,
     ProductAddComponent,
     ProductEditComponent,
-    AdminLayoutComponent,
-    DashboardComponent,
-    HomePageComponent,
+   
    
    
   ],
